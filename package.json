@@ -1,0 +1,27 @@
+{
+  "name": "pronom-ai-generator",
+  "version": "1.0.0",
+  "description": "A web-based AI tool that generates PRONOM database entries from file format information",
+  "main": "server.py",
+  "scripts": {
+    "start": "python3 server.py",
+    "serve": "python3 server.py"
+  },
+  "keywords": [
+    "pronom",
+    "digital-preservation",
+    "file-formats",
+    "ai",
+    "metadata",
+    "archives"
+  ],
+  "author": "PRONOM AI Generator",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Francesca4242/pronom_experiments_ai"
+  },
+  "engines": {
+    "python": ">=3.6"
+  }
+}
