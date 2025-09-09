@@ -15,25 +15,40 @@ class PRONOMAIGenerator {
     }
 
     loadExampleData() {
-        const exampleData = `Name: Windows Bitmap
-Version: 1.0
-Other names: BMP (1.0)
-Classification: Image (Raster)
-MIME: image/bmp
-PUID: fmt/114
+        const exampleData = `EXAMPLE PRONOM ENTRY:
 
-Name: Acrobat PDF/X - Portable Document Format - Exchange 1:2001
-Other names: PDF/X-1:2001
-Classification: Page Description
-MIME: application/pdf
-PUID: fmt/145
-
-Name: Extensible Markup Language
-Version: 1.1
-Other names: XML (1.1)
-Classification: Text (Mark-up)
-MIME: application/xml, text/xml
-PUID: fmt/1776`;
+┌─────────────────────────┬──────────────────────────────────────────────────────────────────────────────────┐
+│ Field                   │ Value                                                                            │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────┤
+│ Name                    │ Husqvarna Embroidery Stitch File                                                │
+│ Version                 │                                                                                  │
+│ Other names             │                                                                                  │
+│ Identifiers             │ PUID: fmt/2000                                                                   │
+│ Family                  │                                                                                  │
+│ Classification          │ Dataset                                                                          │
+│ Disclosure              │                                                                                  │
+│ Description             │ A HUS embroidery file is a design file that was used throughout the 1990's     │
+│                         │ created by Husqvarna-Viking, a Swedish company that creates sewing machines.   │
+│                         │ Computerised embroidery machines such as this those made by this company have  │
+│                         │ been in production since the early 1990's with support for a specialized       │
+│                         │ memory card, floppy disk, and USB connections. The HUS format was replaced     │
+│                         │ after a merger of the company with PFAFF in the late 1990s.                   │
+│ Orientation             │                                                                                  │
+│ Byte order              │                                                                                  │
+│ Related file formats    │ Is previous version of Husqvarna / Pfaff Embroidery Stitch File               │
+│ Technical Environment   │                                                                                  │
+│ Released                │                                                                                  │
+│ Supported until         │                                                                                  │
+│ Format Risk             │                                                                                  │
+│ Developed by            │ Husqvarna-Viking                                                                │
+│ Supported by            │ Husqvarna-Viking                                                                │
+│ Source                  │ Brigham Young University / Brigham Young University                             │
+│ Source date             │ 19 Apr 2024                                                                     │
+│ Source description      │                                                                                  │
+│ Last updated            │ 19 Apr 2024                                                                     │
+│ Note                    │ https://www.embroidery.com/machine-embroidery-formats                          │
+│                         │ http://fileformats.archiveteam.org/wiki/HUS                                    │
+└─────────────────────────┴──────────────────────────────────────────────────────────────────────────────────┘`;
 
         document.getElementById('exampleData').textContent = exampleData;
     }
