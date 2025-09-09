@@ -101,7 +101,7 @@ PUID: fmt/1776`;
                 messages: [
                     {
                         role: 'system',
-                        content: 'You are an expert in digital preservation and file format identification. Generate PRONOM database entries based on file information provided.'
+                        content: 'You are an expert in digital preservation and file format identification. Generate PRONOM database entries based on file information provided.  Descriptions cannot sound like marketing material'
                     },
                     {
                         role: 'user',
@@ -193,12 +193,67 @@ Note	[Additional notes]
 FILE INFORMATION TO PROCESS:
 ${fileData}
 
-Please generate a complete PRONOM entry following the exact format above. If information is not available, you may use "None." or leave fields empty as appropriate. Be thorough and accurate in your analysis.`;
+Please generate a complete PRONOM entry following the exact format above. If information is not available, you may use "None." or leave fields empty as appropriate. Be thorough and accurate in your analysis.
+
+Here are some good exmples of PRONOM entries for reference:
+Name	DjVu File Format
+Version	 
+Other names	 
+Identifiers	PUID:  fmt/255
+MIME:  image/vnd.djvu
+MIME:  image/x-djvu
+Family	 
+Classification	Image (Raster)
+Disclosure	 
+Description	The Digital Video file format was developed as a videocassette format in the 1990s by a consortium of consumer video companies and is described in the IEC 61834 series of standards. DV video content utilizes Discrete Cosine Transform compression, but allows for higher quality than formats that use similar compression schemes. DV files can be "raw" with the .dv file extension or wrapped into video container formats.
+Orientation	Text
+Byte order	 
+Related file formats	None.
+Technical Environment	 
+Released	 
+Supported until	 
+Format Risk	 
+Developed by	Caminova Corporation
+Supported by	Caminova Corporation
+Source	National Library of Singapore / National Library Board Singapore
+Source date	08 Jan 2010
+Source description	v.120- Updated description as part of PRONOM Research Week 2024. Submitted by the Digital Research Alliance of Canada - Federated Research Data Repository / Alliance de recherche numérique du Canada - Dépôt fédéré de données de recherche.
+Last updated	02 Jan 2025
+Note
+
+---
+
+Name	Husqvarna Embroidery Stitch File
+Version	 
+Other names	 
+Identifiers	PUID:  fmt/2000
+Family	 
+Classification	Dataset
+Disclosure	 
+Description	A HUS embroidery file is a design file that was used throughout the 1990's created by Husqvarna-Viking, a Swedish company that creates sewing machines. Computerised embroidery machines such as this those made by this company have been in production since the early 1990's with support for a specialized memory card, floppy disk, and USB connections. The HUS format was replaced after a merger of the company with PFAFF in the late 1990s.
+Orientation	 
+Byte order	 
+Related file formats	Is previous version of Husqvarna / Pfaff Embroidery Stitch File  
+Technical Environment	 
+Released	 
+Supported until	 
+Format Risk	 
+Developed by	Husqvarna-Viking
+Supported by	Husqvarna-Viking
+Source	Brigham Young University / Brigham Young University
+Source date	19 Apr 2024
+Source description	 
+Last updated	19 Apr 2024
+Note	https://www.embroidery.com/machine-embroidery-formats http://fileformats.archiveteam.org/wiki/HUS
+`;
     }
 
     generateMockPRONOMEntry(fileData) {
         // Mock AI response for demonstration
-        return `Name	Unknown Format
+        return `
+        MOCK DATA BECAUSE LOCAL AI NOT FOUND.
+        
+        Name	Unknown Format
 Version	
 Other names	
 Identifiers	MIME: application/octet-stream
@@ -224,7 +279,36 @@ Note	This entry was generated automatically and requires manual verification.`;
     }
 
     displayResult(result) {
-        this.outputContent.textContent = result;
+        const disclaimer = `
+
+⚠️  IMPORTANT DISCLAIMER ⚠️
+
+This PRONOM entry was generated using artificial intelligence and should be thoroughly checked before submission. 
+
+CRITICAL REMINDERS:
+• This entry has NOT been verified by digital preservation experts
+• All information should be thoroughly fact-checked against official sources
+• Technical specifications may contain inaccuracies or outdated information
+• MIME types, PUIDs, and identifiers require validation before use
+• Format relationships and classifications should be independently verified
+• Release dates, developer information, and technical details need confirmation
+
+BEFORE SUBMITTING TO PRONOM:
+• Cross-reference all technical specifications with official documentation
+• Verify MIME types against IANA registry and other authoritative sources
+• Confirm PUID format follows PRONOM conventions (fmt/XXXX)
+• Review classification categories against PRONOM taxonomy
+• Validate all developer and organizational information
+• Check format relationships and dependencies
+• Ensure description accuracy and completeness
+
+This tool is designed to assist digital preservation professionals, but human expertise and verification remain essential for accurate PRONOM database entries. Always consult official documentation, format specifications, and subject matter experts before finalizing any entry.
+
+Generated on: ${new Date().toLocaleString()}
+
+========================================`;
+
+        this.outputContent.textContent = result + disclaimer;
         this.outputContent.classList.remove('loading');
     }
 

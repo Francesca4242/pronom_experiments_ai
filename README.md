@@ -4,11 +4,11 @@ A web-based AI tool that generates PRONOM database entries from file format info
 
 ## Features
 
-- **AI-Powered Generation**: Uses artificial intelligence to analyze file information and generate structured PRONOM database entries
-- **Multiple AI Providers**: Supports OpenAI GPT, Anthropic Claude, and local AI implementations
-- **User-Friendly Interface**: Clean, modern web interface for easy data input and output
-- **Export Functionality**: Copy generated entries to clipboard or export as text files
-- **Example Data**: Includes sample PRONOM entries to guide users
+- **🤖 AI-Powered Generation**: Uses artificial intelligence to analyze file information and generate structured PRONOM database entries
+- **🔗 Multiple AI Providers**: Supports OpenAI GPT, Anthropic Claude, and local AI implementations
+- **🎨 User-Friendly Interface**: Clean, modern web interface for easy data input and output
+- **📤 Export Functionality**: Copy generated entries to clipboard or export as text files
+- **📚 Example Data**: Includes sample PRONOM entries to guide users
 
 ## How to Use
 
